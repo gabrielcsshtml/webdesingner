@@ -35,27 +35,16 @@
     <section id="contato">
       <h2>Contato</h2>
 
-      <form onsubmit="enviarEmail(event)">
-        <input
-          type="text"
-          id="nome"
-          placeholder="Seu nome"
-          required
-        >
+      <!-- FORMULÁRIO COM FORMSUBMIT -->
+      <form action="https://formsubmit.co/gabrielgstz0040@gmail.com" method="POST">
 
-        <input
-          type="email"
-          id="email"
-          placeholder="Seu email"
-          required
-        >
+        <input type="text" name="name" placeholder="Seu nome" required>
+        <input type="email" name="email" placeholder="Seu email" required>
+        <textarea name="message" placeholder="Sua mensagem" required></textarea>
 
-        <textarea
-          id="mensagem"
-          placeholder="Sua mensagem"
-          rows="5"
-          required
-        ></textarea>
+        <!-- CONFIGURAÇÕES EXTRAS -->
+        <input type="hidden" name="_subject" value="Novo contato pelo site">
+        <input type="hidden" name="_captcha" value="false">
 
         <button type="submit">Enviar</button>
       </form>
@@ -66,25 +55,6 @@
   <footer>
     <p>📞 Telefone: +351 937 923 406</p>
   </footer>
-
-  <!-- SCRIPT DE ENVIO PARA O GMAIL -->
-  <script>
-    function enviarEmail(event) {
-      event.preventDefault();
-
-      const nome = document.getElementById("nome").value;
-      const email = document.getElementById("email").value;
-      const mensagem = document.getElementById("mensagem").value;
-
-      const assunto = encodeURIComponent("Contato pelo site");
-      const corpo = encodeURIComponent(
-        `Nome: ${nome}\nEmail: ${email}\n\nMensagem:\n${mensagem}`
-      );
-
-      window.location.href =
-        `mailto:gabrielgstz0040@gmail.com?subject=${assunto}&body=${corpo}`;
-    }
-  </script>
 
 </body>
 </html>
