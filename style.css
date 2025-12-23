@@ -19,12 +19,12 @@ body {
   padding: 20px;
 }
 
-/* HEADER */
+/* HEADER / HERO */
 header {
   background: linear-gradient(135deg, #1f1f1f, #2b2b2b);
   color: white;
   text-align: center;
-  padding: 60px 20px;
+  padding: 80px 20px;
 }
 
 .header-content {
@@ -38,20 +38,21 @@ header {
   margin-bottom: 20px;
 }
 
-.logo img {
-  width: 55px;
-  height: auto;
+header .logo img {
+  width: 48px !important;
+  height: auto !important;
   filter: drop-shadow(0 2px 6px rgba(0,0,0,0.3));
 }
 
-/* TÍTULO */
+/* TITULOS */
 header h1 {
-  font-size: 2.5rem;
+  font-size: 2.6rem;
 }
 
 header p {
-  margin-top: 10px;
+  margin-top: 15px;
   color: #ccc;
+  max-width: 600px;
 }
 
 /* ACTIONS */
@@ -114,13 +115,29 @@ nav a:hover {
 /* SECTIONS */
 section {
   background: white;
-  padding: 40px;
-  margin-bottom: 40px;
+  padding: 50px;
+  margin-bottom: 50px;
   border-radius: 8px;
 }
 
 section h2 {
-  margin-bottom: 20px;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+/* FEATURES */
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.feature {
+  background: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  font-weight: bold;
+  text-align: center;
 }
 
 /* SERVICES */
@@ -139,36 +156,31 @@ section h2 {
   border-left: 4px solid #00c2ff;
 }
 
-/* FORM */
-form {
-  display: flex;
-  flex-direction: column;
+/* STEPS */
+.steps ol {
+  list-style: none;
+  margin-top: 30px;
 }
 
-input, textarea {
-  padding: 12px;
+.steps li {
+  background: #f9f9f9;
   margin-bottom: 15px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+  padding: 15px;
+  border-radius: 8px;
+  font-weight: bold;
+  text-align: center;
 }
 
-textarea {
-  resize: vertical;
-  min-height: 120px;
-}
-
-button {
-  padding: 14px;
-  background: #1f1f1f;
+/* CTA FINAL */
+.cta-final {
+  background: #222;
   color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
+  text-align: center;
 }
 
-button:hover {
-  background: #00c2ff;
-  color: #000;
+.cta-final p {
+  margin: 15px 0;
+  color: #ccc;
 }
 
 /* FOOTER */
@@ -186,17 +198,11 @@ footer {
     gap: 10px;
   }
 
-  .services {
-    flex-direction: column;
+  header h1 {
+    font-size: 2rem;
+  }
+
+  section {
+    padding: 30px;
   }
 }
-
-/* ==================================================
-   FORÇA DEFINITIVA DO TAMANHO DA LOGO (NÃO QUEBRA)
-   ================================================== */
-header .logo img {
-  width: 48px !important;
-  max-width: 48px !important;
-  height: auto !important;
-}
-
