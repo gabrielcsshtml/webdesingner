@@ -35,26 +35,24 @@
     <section id="contato">
       <h2>Contato</h2>
 
-      <!-- FORMULÁRIO COM FORMSUBMIT -->
+      <!-- FORMULÁRIO COM BACKEND (FormSubmit) -->
       <form action="https://formsubmit.co/gabrielgstz0040@gmail.com" method="POST">
 
         <input type="text" name="name" placeholder="Seu nome" required>
         <input type="email" name="email" placeholder="Seu email" required>
-        <textarea name="message" placeholder="Sua mensagem" required></textarea>
+        <input type="text" name="message" placeholder="Sua mensagem" required>
 
-        <!-- CONFIGURAÇÕES EXTRAS -->
+        <!-- CONFIGURAÇÕES IMPORTANTES -->
         <input type="hidden" name="_subject" value="Novo contato pelo site">
         <input type="hidden" name="_captcha" value="false">
+
+        <!-- URL CORRETA PARA VOLTAR AO SITE -->
+        <input
+          type="hidden"
+          name="_next"
+          value="https://gabrielcsshtml.github.io/meu-site-2/"
+        >
 
         <button type="submit">Enviar</button>
       </form>
     </section>
-
-  </main>
-
-  <footer>
-    <p>📞 Telefone: +351 937 923 406</p>
-  </footer>
-
-</body>
-</html>
